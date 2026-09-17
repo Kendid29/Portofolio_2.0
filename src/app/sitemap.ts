@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { projects } from "@/data/projects";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://hadidportofolio.netlify.app";
+  const baseUrl = "https://www.hadid.my.id/";
 
   const staticRoutes = [
     {

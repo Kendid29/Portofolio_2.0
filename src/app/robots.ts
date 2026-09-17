@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://hadidportofolio.netlify.app/sitemap.xml",
+    sitemap: "https://www.hadid.my.id/sitemap.xml",
   };
 }
