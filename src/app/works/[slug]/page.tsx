@@ -1,12 +1,11 @@
 import { projects } from "@/data/projects";
 import { notFound } from "next/navigation";
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
 import { Section } from "@/components/ui/section";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { Metadata } from "next";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -41,9 +40,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
   return (
     <>
-      <Navbar />
       <main className="flex min-h-screen flex-col overflow-hidden bg-[var(--color-canvas)] pb-24">
-        <Section className="pt-12 md:pt-24 pb-12">
+        <Section className="pt-24 md:pt-32 pb-12">
           <Button asChild variant="ghost" className="mb-8">
             <Link href="/#works">
               <ArrowLeft className="mr-2 h-5 w-5" /> Back to Works
@@ -52,7 +50,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           
           <div className="space-y-6 max-w-4xl">
             <Badge variant="primary">{project.category}</Badge>
-            <h1 className="font-display text-4xl md:text-6xl font-extrabold uppercase text-[var(--color-obsidian)] drop-shadow-[2px_2px_0px_#121212]">
+            <h1 className="font-display text-4xl md:text-6xl font-extrabold uppercase text-[var(--color-obsidian)] drop-shadow-[2px_2px_0px_var(--color-on-surface)]">
               {project.title}
             </h1>
             <p className="font-body text-xl md:text-2xl font-medium text-[var(--color-obsidian)]">
@@ -61,10 +59,16 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           </div>
         </Section>
         
-        {/* Project Cover Placeholder */}
+        {/* Project Cover */}
         <Section className="py-0">
-           <div className="w-full aspect-video border-[4px] border-[var(--color-obsidian)] shadow-[var(--shadow-neo-lg)] bg-[var(--color-tertiary)] flex items-center justify-center">
-             <span className="font-mono text-xl font-bold uppercase">[ Project Cover: {project.slug} ]</span>
+           <div className="relative w-full aspect-video border-[4px] border-[var(--color-obsidian)] shadow-[var(--shadow-neo-lg)] bg-[var(--color-surface-container)] overflow-hidden">
+             <Image
+               src={project.cover}
+               alt={`${project.title} Cover`}
+               fill
+               priority
+               className="object-cover object-top"
+             />
            </div>
         </Section>
 
@@ -115,18 +119,22 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           </div>
         </Section>
         
-        {/* Gallery Placeholder */}
+        {/* Gallery */}
         <Section className="py-0">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {project.gallery.map((img, i) => (
-               <div key={i} className="aspect-video border-[4px] border-[var(--color-obsidian)] shadow-[var(--shadow-neo-md)] bg-[var(--color-primary)] flex items-center justify-center">
-                 <span className="font-mono font-bold uppercase">[ Gallery Image {i + 1} ]</span>
+               <div key={i} className="relative aspect-video border-[4px] border-[var(--color-obsidian)] shadow-[var(--shadow-neo-md)] bg-[var(--color-surface-container)] overflow-hidden">
+                 <Image
+                   src={img}
+                   alt={`${project.title} Screenshot ${i + 1}`}
+                   fill
+                   className="object-cover object-top hover:scale-105 transition-transform duration-300"
+                 />
                </div>
             ))}
           </div>
         </Section>
       </main>
-      <Footer />
     </>
   );
 }

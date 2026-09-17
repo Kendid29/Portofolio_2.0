@@ -2,6 +2,7 @@
 
 import React, { useRef, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export function Hero() {
   const cardRef = useRef<HTMLDivElement>(null);
@@ -36,14 +37,14 @@ export function Hero() {
         const shadowY = 10 + (rotateX * 0.6);
 
         card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.02, 1.02, 1.02)`;
-        card.style.boxShadow = `${shadowX.toFixed(1)}px ${shadowY.toFixed(1)}px 0px 0px #1c1b1b`;
+        card.style.boxShadow = `${shadowX.toFixed(1)}px ${shadowY.toFixed(1)}px 0px 0px var(--color-on-surface)`;
       });
     };
 
     const handleMouseLeave = () => {
       if (rafId) cancelAnimationFrame(rafId);
       card.style.transform = "perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
-      card.style.boxShadow = "10px 10px 0px 0px #1c1b1b";
+      card.style.boxShadow = "10px 10px 0px 0px var(--color-on-surface)";
     };
 
     container.addEventListener("mousemove", handleMouseMove);
@@ -81,13 +82,13 @@ export function Hero() {
           <div className="lg:col-span-7 flex flex-col gap-[var(--spacing-space-md)] z-10">
             {/* High-Octane Status Pill */}
             <div className="inline-flex flex-wrap items-center gap-2 anim-spring-1">
-              <div className="inline-flex items-center gap-2 px-[var(--spacing-space-sm)] py-1 bg-[var(--color-surface-container-lowest)] border-2 border-[var(--color-on-surface)] shadow-[4px_4px_0px_0px_#1c1b1b] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[2px_2px_0px_0px_#1c1b1b] transition-all">
+              <div className="inline-flex items-center gap-2 px-[var(--spacing-space-sm)] py-1 bg-[var(--color-surface-container-lowest)] border-2 border-[var(--color-on-surface)] shadow-[4px_4px_0px_0px_var(--color-on-surface)] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[2px_2px_0px_0px_var(--color-on-surface)] transition-all">
                 <svg className="w-4 h-4 text-[var(--color-primary)] font-bold animate-bounce" fill="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                 <span className="font-label-caps text-[var(--font-label-caps)] text-[var(--color-on-surface)] font-bold tracking-wider">
                   12TH GRADE RPL STUDENT · FRONTEND &amp; FULL-STACK EXPLORER
                 </span>
               </div>
-              <div className="hidden sm:inline-flex items-center px-2 py-1 bg-[var(--color-primary-container)] border-2 border-[var(--color-on-surface)] shadow-[3px_3px_0px_0px_#1c1b1b] float-badge-1 cursor-default select-none">
+              <div className="hidden sm:inline-flex items-center px-2 py-1 bg-[var(--color-primary-container)] border-2 border-[var(--color-on-surface)] shadow-[3px_3px_0px_0px_var(--color-on-surface)] float-badge-1 cursor-default select-none">
                 <span className="font-label-caps text-[var(--font-label-caps)] text-[var(--color-on-surface)] font-black">INTERNSHIP READY</span>
               </div>
             </div>
@@ -95,16 +96,16 @@ export function Hero() {
             {/* Headline Stack with Staggered Neo-Brutalist Words */}
             <div className="relative flex flex-col pt-2">
               <div className="flex items-center gap-2 -mb-2 anim-spring-2">
-                <span className="px-2.5 py-0.5 bg-[var(--color-secondary-container)] border-2 border-[var(--color-on-surface)] shadow-[3px_3px_0px_0px_#1c1b1b] font-label-code text-[12px] text-[var(--color-on-surface)] font-bold uppercase rotate-1">
+                <span className="px-2.5 py-0.5 bg-[var(--color-secondary-container)] border-2 border-[var(--color-on-surface)] shadow-[3px_3px_0px_0px_var(--color-on-surface)] font-label-code text-[12px] text-[var(--color-on-surface)] font-bold uppercase rotate-1">
                   // SYSTEM ARCHITECT
                 </span>
-                <span className="px-2 py-0.5 bg-[var(--color-tertiary-container)] border-2 border-[var(--color-on-surface)] shadow-[3px_3px_0px_0px_#1c1b1b] font-label-caps text-[var(--font-label-caps)] text-[var(--color-on-surface)] font-bold float-badge-2 cursor-default select-none">
+                <span className="px-2 py-0.5 bg-[var(--color-tertiary-container)] border-2 border-[var(--color-on-surface)] shadow-[3px_3px_0px_0px_var(--color-on-surface)] font-label-caps text-[var(--font-label-caps)] text-[var(--color-on-surface)] font-bold float-badge-2 cursor-default select-none">
                   100% HAND-CRAFTED CODE
                 </span>
               </div>
               <h1 className="font-display text-[42px] sm:text-[60px] lg:text-[76px] leading-[0.98] tracking-tighter text-[var(--color-on-surface)] font-extrabold uppercase mt-2">
                 <span className="inline-block anim-spring-2">BUILDING</span>{" "}
-                <span className="bg-[var(--color-primary-container)] px-2 py-0.5 border-4 border-[var(--color-on-surface)] shadow-[5px_5px_0px_0px_#1c1b1b] inline-block -rotate-1 anim-spring-3 hover:rotate-0 transition-transform duration-200">IDEAS,</span><br/>
+                <span className="bg-[var(--color-primary-container)] px-2 py-0.5 border-4 border-[var(--color-on-surface)] shadow-[5px_5px_0px_0px_var(--color-on-surface)] inline-block -rotate-1 anim-spring-3 hover:rotate-0 transition-transform duration-200">IDEAS,</span><br/>
                 <span className="inline-block anim-spring-4">EXPLORING</span>{" "}
                 <span className="relative inline-block mt-2 anim-spring-5">
                   <span className="relative z-10 text-[var(--color-on-surface)]">SYSTEMS.</span>
@@ -120,15 +121,15 @@ export function Hero() {
 
             {/* Tactile Action Triggers */}
             <div className="flex flex-wrap items-center gap-4 pt-2 anim-spring-6">
-              <Link href="#works" className="tactile-btn brutalist-confetti-btn group relative inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[var(--color-primary-container)] border-4 border-[var(--color-on-surface)] shadow-[6px_6px_0px_0px_#1c1b1b] font-label-code text-[15px] font-bold text-[var(--color-on-surface)] uppercase tracking-wide cursor-pointer">
+              <Link href="#works" className="tactile-btn brutalist-confetti-btn group relative inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[var(--color-primary-container)] border-4 border-[var(--color-on-surface)] shadow-[6px_6px_0px_0px_var(--color-on-surface)] font-label-code text-[15px] font-bold text-[var(--color-on-surface)] uppercase tracking-wide cursor-pointer">
                 <span>EXPLORE SELECTED WORKS</span>
                 <svg className="w-5 h-5 group-hover:translate-y-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
               </Link>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="tactile-btn brutalist-confetti-btn group relative inline-flex items-center justify-center gap-2 px-5 py-3.5 bg-[var(--color-surface-container-lowest)] border-4 border-[var(--color-on-surface)] shadow-[6px_6px_0px_0px_#1c1b1b] font-label-code text-[15px] font-bold text-[var(--color-on-surface)] uppercase tracking-wide hover:bg-[var(--color-secondary-container)] cursor-pointer">
+              <a href="https://github.com/Kendid29" target="_blank" rel="noopener noreferrer" className="tactile-btn brutalist-confetti-btn group relative inline-flex items-center justify-center gap-2 px-5 py-3.5 bg-[var(--color-surface-container-lowest)] border-4 border-[var(--color-on-surface)] shadow-[6px_6px_0px_0px_var(--color-on-surface)] font-label-code text-[15px] font-bold text-[var(--color-on-surface)] uppercase tracking-wide hover:bg-[var(--color-secondary-container)] cursor-pointer">
                 <span>GITHUB REPO</span>
                 <svg className="w-4 h-4 group-hover:rotate-45 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
               </a>
-              <Link href="#contact" className="tactile-btn brutalist-confetti-btn inline-flex items-center gap-2 px-4 py-3 bg-[var(--color-surface-container-high)] border-2 border-[var(--color-on-surface)] shadow-[4px_4px_0px_0px_#1c1b1b] font-label-caps text-[var(--font-label-caps)] text-[var(--color-on-surface)] font-bold hover:bg-[var(--color-tertiary-container)] cursor-pointer">
+              <Link href="#contact" className="tactile-btn brutalist-confetti-btn inline-flex items-center gap-2 px-4 py-3 bg-[var(--color-surface-container-high)] border-2 border-[var(--color-on-surface)] shadow-[4px_4px_0px_0px_var(--color-on-surface)] font-label-caps text-[var(--font-label-caps)] text-[var(--color-on-surface)] font-bold hover:bg-[var(--color-tertiary-container)] cursor-pointer">
                 <span>LET&apos;S TALK</span>
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" /></svg>
               </Link>
@@ -150,7 +151,7 @@ export function Hero() {
 
           {/* Right Column: Interactive 3D Tilt Neo-Brutalist Frame with Stickers (5 Cols) */}
           <div className="lg:col-span-5 relative flex justify-center lg:justify-end mt-6 lg:mt-0 tilt-card-perspective anim-spring-4">
-            <div ref={cardRef} className="tilt-card relative w-full max-w-[420px] bg-[var(--color-surface-container-lowest)] border-4 border-[var(--color-on-surface)] shadow-[10px_10px_0px_0px_#1c1b1b]" id="heroPortraitCard">
+            <div ref={cardRef} className="tilt-card relative w-full max-w-[420px] bg-[var(--color-surface-container-lowest)] border-4 border-[var(--color-on-surface)] shadow-[10px_10px_0px_0px_var(--color-on-surface)]" id="heroPortraitCard">
               {/* Technical Window Titlebar */}
               <div className="bg-[var(--color-on-surface)] text-[var(--color-surface)] px-4 py-2 flex items-center justify-between border-b-4 border-[var(--color-on-surface)] select-none">
                 <div className="flex items-center gap-2">
@@ -165,7 +166,7 @@ export function Hero() {
               {/* Frame Viewport */}
               <div className="relative p-4 bg-[var(--color-tertiary-fixed-dim)]/20">
                 {/* Floating Slanted Badge: Top-Right */}
-                <div className="absolute -top-5 -right-4 z-20 px-3 py-1 bg-[var(--color-primary-container)] border-2 border-[var(--color-on-surface)] shadow-[4px_4px_0px_0px_#1c1b1b] float-badge-4 hover:rotate-0 transition-transform select-none">
+                <div className="absolute -top-5 -right-4 z-20 px-3 py-1 bg-[var(--color-primary-container)] border-2 border-[var(--color-on-surface)] shadow-[4px_4px_0px_0px_var(--color-on-surface)] float-badge-4 hover:rotate-0 transition-transform select-none">
                   <div className="flex items-center gap-1.5 font-label-code text-[12px] font-bold text-[var(--color-on-surface)]">
                     <span>📍 IDN / GMT+7</span>
                   </div>
@@ -173,14 +174,21 @@ export function Hero() {
 
                 {/* Main Hero Image Container */}
                 <div className="relative w-full aspect-square border-4 border-[var(--color-on-surface)] overflow-hidden bg-[var(--color-surface-container)]">
-                  <img alt="Portrait Placeholder" className="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-300" src="https://placehold.co/800x800/1c1b1b/fcf9f8?text=Portrait" />
+                  <Image 
+                    src="/images/profile/profile.webp" 
+                    alt="Hadid Rayyan Nandana Profile Photo" 
+                    width={800} 
+                    height={800} 
+                    priority 
+                    className="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-300" 
+                  />
                   {/* Crosshairs in Corners */}
                   <div className="absolute top-2 left-2 pointer-events-none font-label-code text-[11px] font-black text-[var(--color-on-surface)] bg-[var(--color-surface-container-lowest)] px-1 border border-[var(--color-on-surface)] select-none">+ [0,0]</div>
                   <div className="absolute bottom-2 right-2 pointer-events-none font-label-code text-[11px] font-black text-[var(--color-on-surface)] bg-[var(--color-primary-container)] px-1 border border-[var(--color-on-surface)] select-none">1024x1024</div>
                 </div>
 
                 {/* Floating Tactile Badge: Bottom-Left */}
-                <div className="absolute -bottom-4 -left-4 z-20 px-3 py-1.5 bg-[var(--color-secondary-container)] border-3 border-[var(--color-on-surface)] shadow-[4px_4px_0px_0px_#1c1b1b] float-badge-3 hover:rotate-0 transition-transform select-none">
+                <div className="absolute -bottom-4 -left-4 z-20 px-3 py-1.5 bg-[var(--color-secondary-container)] border-3 border-[var(--color-on-surface)] shadow-[4px_4px_0px_0px_var(--color-on-surface)] float-badge-3 hover:rotate-0 transition-transform select-none">
                   <div className="flex items-center gap-1.5 font-label-code text-[13px] font-bold text-[var(--color-on-surface)]">
                     <svg className="w-4 h-4 font-black" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M4 6h16v12H4z" /></svg>
                     <span>3+ YRS CODE EXP</span>
@@ -209,7 +217,7 @@ export function Hero() {
       <div className="w-full bg-[var(--color-surface-container-lowest)] border-t-4 border-[var(--color-on-surface)]">
         <div className="max-w-7xl mx-auto px-[var(--spacing-gutter)] py-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="p-4 bg-[var(--color-surface)] border-3 border-[var(--color-on-surface)] shadow-[4px_4px_0px_0px_#1c1b1b] flex flex-col justify-between group hover:bg-[var(--color-primary-container)] hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_#1c1b1b] transition-all cursor-default">
+            <div className="p-4 bg-[var(--color-surface)] border-3 border-[var(--color-on-surface)] shadow-[4px_4px_0px_0px_var(--color-on-surface)] flex flex-col justify-between group hover:bg-[var(--color-primary-container)] hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_var(--color-on-surface)] transition-all cursor-default">
               <div className="flex items-center justify-between mb-2">
                 <span className="font-label-caps text-[var(--font-label-caps)] font-bold text-[var(--color-on-surface-variant)] group-hover:text-[var(--color-on-surface)]">TRACK RECORD</span>
                 <svg className="w-6 h-6 text-[var(--color-on-surface)] group-hover:rotate-12 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
@@ -220,7 +228,7 @@ export function Hero() {
               </div>
             </div>
             
-            <div className="p-4 bg-[var(--color-surface)] border-3 border-[var(--color-on-surface)] shadow-[4px_4px_0px_0px_#1c1b1b] flex flex-col justify-between group hover:bg-[var(--color-tertiary-container)] hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_#1c1b1b] transition-all cursor-default">
+            <div className="p-4 bg-[var(--color-surface)] border-3 border-[var(--color-on-surface)] shadow-[4px_4px_0px_0px_var(--color-on-surface)] flex flex-col justify-between group hover:bg-[var(--color-tertiary-container)] hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_var(--color-on-surface)] transition-all cursor-default">
               <div className="flex items-center justify-between mb-2">
                 <span className="font-label-caps text-[var(--font-label-caps)] font-bold text-[var(--color-on-surface-variant)] group-hover:text-[var(--color-on-surface)]">PRIMARY WORKBENCH</span>
                 <svg className="w-6 h-6 text-[var(--color-on-surface)] group-hover:rotate-12 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
@@ -231,7 +239,7 @@ export function Hero() {
               </div>
             </div>
 
-            <div className="p-4 bg-[var(--color-surface)] border-3 border-[var(--color-on-surface)] shadow-[4px_4px_0px_0px_#1c1b1b] flex flex-col justify-between group hover:bg-[var(--color-secondary-container)] hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_#1c1b1b] transition-all cursor-default">
+            <div className="p-4 bg-[var(--color-surface)] border-3 border-[var(--color-on-surface)] shadow-[4px_4px_0px_0px_var(--color-on-surface)] flex flex-col justify-between group hover:bg-[var(--color-secondary-container)] hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_var(--color-on-surface)] transition-all cursor-default">
               <div className="flex items-center justify-between mb-2">
                 <span className="font-label-caps text-[var(--font-label-caps)] font-bold text-[var(--color-on-surface-variant)] group-hover:text-[var(--color-on-surface)]">BENCHMARK</span>
                 <svg className="w-6 h-6 text-[var(--color-on-surface)] group-hover:rotate-12 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>

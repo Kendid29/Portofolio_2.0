@@ -4,23 +4,23 @@ import React from "react";
 
 export function Skills() {
   return (
-    <section className="relative w-full border-b-4 border-[var(--color-on-surface)] bg-[var(--color-surface-container-lowest)] py-[var(--spacing-space-lg)] lg:py-[var(--spacing-space-xl)] px-[var(--spacing-gutter)]" id="skills" style={{ backgroundImage: "radial-gradient(var(--color-on-surface) 1px, transparent 1px)", backgroundSize: "24px 24px" }}>
+    <section className="reveal-on-scroll relative w-full border-b-4 border-[var(--color-on-surface)] bg-[var(--color-surface-container-lowest)] py-[var(--spacing-space-lg)] lg:py-[var(--spacing-space-xl)] px-[var(--spacing-gutter)]" id="skills" style={{ backgroundImage: "radial-gradient(var(--color-on-surface) 1px, transparent 1px)", backgroundSize: "24px 24px" }}>
       <div className="max-w-7xl mx-auto flex flex-col gap-10">
         {/* Header Block */}
         <div className="flex flex-col gap-3">
-          <div className="flex flex-wrap items-center gap-3">
-            <span className="px-3 py-1 bg-[var(--color-primary-container)] border-2 border-[var(--color-on-surface)] shadow-[3px_3px_0px_0px_#1c1b1b] font-label-code text-xs font-black uppercase tracking-wider text-[var(--color-on-surface)]">
+          <div className="flex flex-wrap items-center gap-3 anim-spring-1">
+            <span className="px-3 py-1 bg-[var(--color-primary-container)] border-2 border-[var(--color-on-surface)] shadow-[3px_3px_0px_0px_var(--color-on-surface)] font-label-code text-xs font-black uppercase tracking-wider text-[var(--color-on-surface)]">
               // 03. TECHNICAL CAPABILITIES // ARSENAL
             </span>
-            <span className="px-2 py-0.5 bg-[var(--color-tertiary-container)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_#1c1b1b] font-label-caps text-[var(--font-label-caps)] font-bold text-[var(--color-on-surface)]">
+            <span className="px-2 py-0.5 bg-[var(--color-tertiary-container)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_var(--color-on-surface)] font-label-caps text-[var(--font-label-caps)] font-bold text-[var(--color-on-surface)] float-badge-3 cursor-default select-none">
               BENCHMARK: TESTED
             </span>
           </div>
-          <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl font-extrabold uppercase text-[var(--color-on-surface)] tracking-tight leading-[1.05]">
+          <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl font-extrabold uppercase text-[var(--color-on-surface)] tracking-tight leading-[1.05] anim-spring-2">
             CRAFTING WITH ROBUST TOOLS <br className="hidden sm:inline" />
-            <span className="bg-[var(--color-secondary-container)] px-2 border-4 border-[var(--color-on-surface)] shadow-[5px_5px_0px_0px_#1c1b1b] inline-block mt-1">&amp; MODERN RUNTIMES.</span>
+            <span className="bg-[var(--color-secondary-container)] px-2 border-4 border-[var(--color-on-surface)] shadow-[5px_5px_0px_0px_var(--color-on-surface)] inline-block mt-1 -rotate-0.5 hover:rotate-0 transition-transform">&amp; MODERN RUNTIMES.</span>
           </h2>
-          <p className="font-body-lg text-lg sm:text-xl text-[var(--color-on-surface-variant)] max-w-3xl font-medium mt-1">
+          <p className="font-body-lg text-lg sm:text-xl text-[var(--color-on-surface-variant)] max-w-3xl font-medium mt-1 anim-spring-3">
             Distinguishing clearly between production-tested workflows, operational foundations, and active expansion territories.
           </p>
         </div>
@@ -28,7 +28,7 @@ export function Skills() {
         {/* 4 Tier Neo-Brutalist Skills Matrix */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Group 1: CORE WORKBENCH & PRODUCTION */}
-          <div className="neo-card-lift bg-[var(--color-surface)] border-4 border-[var(--color-on-surface)] shadow-[8px_8px_0px_0px_#1c1b1b] p-6 flex flex-col justify-between">
+          <div className="anim-spring-4 neo-card-lift bg-[var(--color-surface)] border-4 border-[var(--color-on-surface)] shadow-[8px_8px_0px_0px_var(--color-on-surface)] p-6 flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between pb-4 border-b-2 border-[var(--color-on-surface)] mb-4">
                 <div className="flex items-center gap-2">
@@ -42,28 +42,28 @@ export function Skills() {
                 Clean component composition, reactive client state, accessible markup, and zero-layout-shift UI engineering.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <div className="p-3 bg-[var(--color-surface-container-lowest)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_#1c1b1b] flex flex-col justify-between">
+                <div className="p-3 bg-[var(--color-surface-container-lowest)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_var(--color-on-surface)] flex flex-col justify-between">
                   <div className="flex items-center justify-between mb-1">
                     <span className="font-headline-sm text-base font-bold text-[var(--color-on-surface)]">Next.js 14</span>
                     <span className="text-[10px] font-label-caps px-1 bg-[var(--color-primary-container)] border border-[var(--color-on-surface)] font-black">PROD</span>
                   </div>
                   <span className="font-label-code text-[11px] text-[var(--color-on-surface-variant)]">App Router / SSR / Caching</span>
                 </div>
-                <div className="p-3 bg-[var(--color-surface-container-lowest)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_#1c1b1b] flex flex-col justify-between">
+                <div className="p-3 bg-[var(--color-surface-container-lowest)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_var(--color-on-surface)] flex flex-col justify-between">
                   <div className="flex items-center justify-between mb-1">
                     <span className="font-headline-sm text-base font-bold text-[var(--color-on-surface)]">React 18</span>
                     <span className="text-[10px] font-label-caps px-1 bg-[var(--color-primary-container)] border border-[var(--color-on-surface)] font-black">PROD</span>
                   </div>
                   <span className="font-label-code text-[11px] text-[var(--color-on-surface-variant)]">Hooks / State / Context</span>
                 </div>
-                <div className="p-3 bg-[var(--color-surface-container-lowest)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_#1c1b1b] flex flex-col justify-between">
+                <div className="p-3 bg-[var(--color-surface-container-lowest)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_var(--color-on-surface)] flex flex-col justify-between">
                   <div className="flex items-center justify-between mb-1">
                     <span className="font-headline-sm text-base font-bold text-[var(--color-on-surface)]">TypeScript</span>
                     <span className="text-[10px] font-label-caps px-1 bg-[var(--color-tertiary-container)] border border-[var(--color-on-surface)] font-black">STRICT</span>
                   </div>
                   <span className="font-label-code text-[11px] text-[var(--color-on-surface-variant)]">Generics / Interfaces / Safety</span>
                 </div>
-                <div className="p-3 bg-[var(--color-surface-container-lowest)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_#1c1b1b] flex flex-col justify-between">
+                <div className="p-3 bg-[var(--color-surface-container-lowest)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_var(--color-on-surface)] flex flex-col justify-between">
                   <div className="flex items-center justify-between mb-1">
                     <span className="font-headline-sm text-base font-bold text-[var(--color-on-surface)]">Tailwind CSS</span>
                     <span className="text-[10px] font-label-caps px-1 bg-[var(--color-primary-container)] border border-[var(--color-on-surface)] font-black">SPEED</span>
@@ -79,7 +79,7 @@ export function Skills() {
           </div>
 
           {/* Group 2: BACKEND & DATA FOUNDATIONS */}
-          <div className="neo-card-lift bg-[var(--color-surface)] border-4 border-[var(--color-on-surface)] shadow-[8px_8px_0px_0px_#1c1b1b] p-6 flex flex-col justify-between">
+          <div className="anim-spring-4 neo-card-lift bg-[var(--color-surface)] border-4 border-[var(--color-on-surface)] shadow-[8px_8px_0px_0px_var(--color-on-surface)] p-6 flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between pb-4 border-b-2 border-[var(--color-on-surface)] mb-4">
                 <div className="flex items-center gap-2">
@@ -93,28 +93,28 @@ export function Skills() {
                 Relational database structuring, reliable transactional queries, safe session states, and standards-compliant RESTful endpoints.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <div className="p-3 bg-[var(--color-surface-container-lowest)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_#1c1b1b] flex flex-col justify-between">
+                <div className="p-3 bg-[var(--color-surface-container-lowest)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_var(--color-on-surface)] flex flex-col justify-between">
                   <div className="flex items-center justify-between mb-1">
                     <span className="font-headline-sm text-base font-bold text-[var(--color-on-surface)]">PHP 8+</span>
                     <span className="text-[10px] font-label-caps px-1 bg-[var(--color-surface-container)] border border-[var(--color-on-surface)] font-bold">PROD</span>
                   </div>
                   <span className="font-label-code text-[11px] text-[var(--color-on-surface-variant)]">OOP / Sessions / Sanitization</span>
                 </div>
-                <div className="p-3 bg-[var(--color-surface-container-lowest)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_#1c1b1b] flex flex-col justify-between">
+                <div className="p-3 bg-[var(--color-surface-container-lowest)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_var(--color-on-surface)] flex flex-col justify-between">
                   <div className="flex items-center justify-between mb-1">
                     <span className="font-headline-sm text-base font-bold text-[var(--color-on-surface)]">MySQL</span>
                     <span className="text-[10px] font-label-caps px-1 bg-[var(--color-surface-container)] border border-[var(--color-on-surface)] font-bold">RELATIONAL</span>
                   </div>
                   <span className="font-label-code text-[11px] text-[var(--color-on-surface-variant)]">Normalized Schema / Joins</span>
                 </div>
-                <div className="p-3 bg-[var(--color-surface-container-lowest)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_#1c1b1b] flex flex-col justify-between">
+                <div className="p-3 bg-[var(--color-surface-container-lowest)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_var(--color-on-surface)] flex flex-col justify-between">
                   <div className="flex items-center justify-between mb-1">
                     <span className="font-headline-sm text-base font-bold text-[var(--color-on-surface)]">RESTful APIs</span>
                     <span className="text-[10px] font-label-caps px-1 bg-[var(--color-tertiary-container)] border border-[var(--color-on-surface)] font-bold">STANDARDS</span>
                   </div>
                   <span className="font-label-code text-[11px] text-[var(--color-on-surface-variant)]">CRUD / HTTP Codes / Payloads</span>
                 </div>
-                <div className="p-3 bg-[var(--color-surface-container-lowest)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_#1c1b1b] flex flex-col justify-between">
+                <div className="p-3 bg-[var(--color-surface-container-lowest)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_var(--color-on-surface)] flex flex-col justify-between">
                   <div className="flex items-center justify-between mb-1">
                     <span className="font-headline-sm text-base font-bold text-[var(--color-on-surface)]">Node.js</span>
                     <span className="text-[10px] font-label-caps px-1 bg-[var(--color-secondary-fixed)] border border-[var(--color-on-surface)] font-bold">RUNTIME</span>
@@ -130,7 +130,7 @@ export function Skills() {
           </div>
 
           {/* Group 3: CURRENTLY EXPLORING & EXPANDING */}
-          <div className="neo-card-lift bg-[var(--color-surface)] border-4 border-[var(--color-on-surface)] shadow-[8px_8px_0px_0px_#1c1b1b] p-6 flex flex-col justify-between">
+          <div className="anim-spring-5 neo-card-lift bg-[var(--color-surface)] border-4 border-[var(--color-on-surface)] shadow-[8px_8px_0px_0px_var(--color-on-surface)] p-6 flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between pb-4 border-b-2 border-[var(--color-on-surface)] mb-4">
                 <div className="flex items-center gap-2">
@@ -144,28 +144,28 @@ export function Skills() {
                 Scaling up beyond monolith scripts into containerized workflows, enterprise databases, and declarative infrastructure.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <div className="p-3 bg-[var(--color-surface-container-lowest)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_#1c1b1b] flex flex-col justify-between">
+                <div className="p-3 bg-[var(--color-surface-container-lowest)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_var(--color-on-surface)] flex flex-col justify-between">
                   <div className="flex items-center justify-between mb-1">
                     <span className="font-headline-sm text-base font-bold text-[var(--color-on-surface)]">PostgreSQL</span>
                     <span className="text-[10px] font-label-caps px-1 bg-[var(--color-secondary-container)] border border-[var(--color-on-surface)] font-black">EXPLORING</span>
                   </div>
                   <span className="font-label-code text-[11px] text-[var(--color-on-surface-variant)]">Prisma / Supabase / Indexing</span>
                 </div>
-                <div className="p-3 bg-[var(--color-surface-container-lowest)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_#1c1b1b] flex flex-col justify-between">
+                <div className="p-3 bg-[var(--color-surface-container-lowest)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_var(--color-on-surface)] flex flex-col justify-between">
                   <div className="flex items-center justify-between mb-1">
                     <span className="font-headline-sm text-base font-bold text-[var(--color-on-surface)]">Docker</span>
                     <span className="text-[10px] font-label-caps px-1 bg-[var(--color-secondary-container)] border border-[var(--color-on-surface)] font-black">EXPLORING</span>
                   </div>
                   <span className="font-label-code text-[11px] text-[var(--color-on-surface-variant)]">Containerization / Dockerfile</span>
                 </div>
-                <div className="p-3 bg-[var(--color-surface-container-lowest)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_#1c1b1b] flex flex-col justify-between">
+                <div className="p-3 bg-[var(--color-surface-container-lowest)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_var(--color-on-surface)] flex flex-col justify-between">
                   <div className="flex items-center justify-between mb-1">
                     <span className="font-headline-sm text-base font-bold text-[var(--color-on-surface)]">CI/CD</span>
                     <span className="text-[10px] font-label-caps px-1 bg-[var(--color-secondary-container)] border border-[var(--color-on-surface)] font-black">ACTIVE</span>
                   </div>
                   <span className="font-label-code text-[11px] text-[var(--color-on-surface-variant)]">GitHub Actions / Automated Lint</span>
                 </div>
-                <div className="p-3 bg-[var(--color-surface-container-lowest)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_#1c1b1b] flex flex-col justify-between">
+                <div className="p-3 bg-[var(--color-surface-container-lowest)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_var(--color-on-surface)] flex flex-col justify-between">
                   <div className="flex items-center justify-between mb-1">
                     <span className="font-headline-sm text-base font-bold text-[var(--color-on-surface)]">System Arch</span>
                     <span className="text-[10px] font-label-caps px-1 bg-[var(--color-tertiary-container)] border border-[var(--color-on-surface)] font-bold">THEORY</span>
@@ -181,7 +181,7 @@ export function Skills() {
           </div>
 
           {/* Group 4: TOOLING & WORKFLOW ARCHITECTURE */}
-          <div className="neo-card-lift bg-[var(--color-surface)] border-4 border-[var(--color-on-surface)] shadow-[8px_8px_0px_0px_#1c1b1b] p-6 flex flex-col justify-between">
+          <div className="anim-spring-6 neo-card-lift bg-[var(--color-surface)] border-4 border-[var(--color-on-surface)] shadow-[8px_8px_0px_0px_var(--color-on-surface)] p-6 flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between pb-4 border-b-2 border-[var(--color-on-surface)] mb-4">
                 <div className="flex items-center gap-2">
@@ -195,28 +195,28 @@ export function Skills() {
                 Optimized developer experience, robust versioning pipelines, testing fixtures, and rigorous performance telemetry.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <div className="p-3 bg-[var(--color-surface-container-lowest)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_#1c1b1b] flex flex-col justify-between">
+                <div className="p-3 bg-[var(--color-surface-container-lowest)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_var(--color-on-surface)] flex flex-col justify-between">
                   <div className="flex items-center justify-between mb-1">
                     <span className="font-headline-sm text-base font-bold text-[var(--color-on-surface)]">Git &amp; GitHub</span>
                     <span className="text-[10px] font-label-caps px-1 bg-[var(--color-primary-container)] border border-[var(--color-on-surface)] font-bold">CORE</span>
                   </div>
                   <span className="font-label-code text-[11px] text-[var(--color-on-surface-variant)]">Semantic Commits / PR Reviews</span>
                 </div>
-                <div className="p-3 bg-[var(--color-surface-container-lowest)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_#1c1b1b] flex flex-col justify-between">
+                <div className="p-3 bg-[var(--color-surface-container-lowest)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_var(--color-on-surface)] flex flex-col justify-between">
                   <div className="flex items-center justify-between mb-1">
                     <span className="font-headline-sm text-base font-bold text-[var(--color-on-surface)]">Lighthouse Audit</span>
                     <span className="text-[10px] font-label-caps px-1 bg-[var(--color-primary-container)] border border-[var(--color-on-surface)] font-bold">100%</span>
                   </div>
                   <span className="font-label-code text-[11px] text-[var(--color-on-surface-variant)]">SEO / Perf / Accessibility / PWA</span>
                 </div>
-                <div className="p-3 bg-[var(--color-surface-container-lowest)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_#1c1b1b] flex flex-col justify-between">
+                <div className="p-3 bg-[var(--color-surface-container-lowest)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_var(--color-on-surface)] flex flex-col justify-between">
                   <div className="flex items-center justify-between mb-1">
                     <span className="font-headline-sm text-base font-bold text-[var(--color-on-surface)]">Vite / Bundlers</span>
                     <span className="text-[10px] font-label-caps px-1 bg-[var(--color-tertiary-container)] border border-[var(--color-on-surface)] font-bold">FAST</span>
                   </div>
                   <span className="font-label-code text-[11px] text-[var(--color-on-surface-variant)]">HMR / Tree-shaking / ESBuild</span>
                 </div>
-                <div className="p-3 bg-[var(--color-surface-container-lowest)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_#1c1b1b] flex flex-col justify-between">
+                <div className="p-3 bg-[var(--color-surface-container-lowest)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_var(--color-on-surface)] flex flex-col justify-between">
                   <div className="flex items-center justify-between mb-1">
                     <span className="font-headline-sm text-base font-bold text-[var(--color-on-surface)]">Postman / Linux</span>
                     <span className="text-[10px] font-label-caps px-1 bg-[var(--color-surface-container)] border border-[var(--color-on-surface)] font-bold">CLI</span>

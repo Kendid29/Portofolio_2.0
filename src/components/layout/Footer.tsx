@@ -10,7 +10,7 @@ export function Footer() {
             <span className="px-2 py-0.5 bg-[var(--color-primary-container)] border border-[var(--color-on-surface)] font-label-caps text-[var(--font-label-caps)] text-[var(--color-on-surface)] font-black">SYS_ONLINE</span>
           </div>
           <p className="font-body-sm text-[var(--font-body-sm)] text-[var(--color-on-surface-variant)]">
-            © 2024 HADID RAYYAN NANDANA. ALL RIGHTS RESERVED. ARCHITECTED WITH RIGOR.
+            © 2024 HADID RAYYAN NANDANA. ALL RIGHTS RESERVED.
           </p>
         </div>
 
@@ -20,23 +20,29 @@ export function Footer() {
           </div>
           <div className="flex items-center gap-2">
             <a 
-              className="p-1.5 bg-[var(--color-surface-container-lowest)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_#1c1b1b] font-label-caps text-[var(--font-label-caps)] text-[var(--color-on-surface)] hover:bg-[var(--color-primary-container)] hover:text-[var(--color-on-surface)] transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none"
-              href="https://github.com"
+              className="p-1.5 bg-[var(--color-surface-container-lowest)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_var(--color-on-surface)] font-label-caps text-[var(--font-label-caps)] text-[var(--color-on-surface)] hover:bg-[var(--color-primary-container)] hover:text-[var(--color-on-surface)] transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none"
+              href="https://github.com/Kendid29"
               target="_blank"
               rel="noopener noreferrer"
             >
               GITHUB
             </a>
             <a 
-              className="p-1.5 bg-[var(--color-surface-container-lowest)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_#1c1b1b] font-label-caps text-[var(--font-label-caps)] text-[var(--color-on-surface)] hover:bg-[var(--color-primary-container)] hover:text-[var(--color-on-surface)] transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none"
-              href="https://linkedin.com"
+              className="p-1.5 bg-[var(--color-surface-container-lowest)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_var(--color-on-surface)] font-label-caps text-[var(--font-label-caps)] text-[var(--color-on-surface)] hover:bg-[var(--color-primary-container)] hover:text-[var(--color-on-surface)] transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none"
+              href="https://www.linkedin.com/in/hadid-rayyan-nandana-baa42b378"
               target="_blank"
               rel="noopener noreferrer"
             >
               LINKEDIN
             </a>
             <a 
-              className="tactile-btn p-1.5 bg-[var(--color-secondary-container)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_#1c1b1b] font-label-caps text-[var(--font-label-caps)] text-[var(--color-on-surface)] hover:bg-[var(--color-on-surface)] hover:text-[var(--color-surface)] transition-all flex items-center gap-1 cursor-pointer"
+              className="p-1.5 bg-[var(--color-surface-container-lowest)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_var(--color-on-surface)] font-label-caps text-[var(--font-label-caps)] text-[var(--color-on-surface)] hover:bg-[var(--color-primary-container)] hover:text-[var(--color-on-surface)] transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none"
+              href="mailto:harana2912@gmail.com"
+            >
+              EMAIL
+            </a>
+            <a 
+              className="tactile-btn p-1.5 bg-[var(--color-secondary-container)] border-2 border-[var(--color-on-surface)] shadow-[2px_2px_0px_0px_var(--color-on-surface)] font-label-caps text-[var(--font-label-caps)] text-[var(--color-on-surface)] hover:bg-[var(--color-on-surface)] hover:text-[var(--color-surface)] transition-all flex items-center gap-1 cursor-pointer"
               href="#hero"
               title="Return to Top"
             >

@@ -132,6 +132,24 @@
 .anim-spring-5 { animation: springInUp 0.65s var(--spring-ease) both 0.45s; }
 .anim-spring-6 { animation: springInUp 0.65s var(--spring-ease) both 0.55s; }
 
+/* Scroll-triggered reveal states for sections */
+.reveal-on-scroll .anim-spring-1,
+.reveal-on-scroll .anim-spring-2,
+.reveal-on-scroll .anim-spring-3,
+.reveal-on-scroll .anim-spring-4,
+.reveal-on-scroll .anim-spring-5,
+.reveal-on-scroll .anim-spring-6 {
+  opacity: 0;
+  animation: none;
+}
+
+.reveal-on-scroll.is-visible .anim-spring-1 { animation: springInUp 0.65s var(--spring-ease) both 0.05s; }
+.reveal-on-scroll.is-visible .anim-spring-2 { animation: springInUp 0.65s var(--spring-ease) both 0.15s; }
+.reveal-on-scroll.is-visible .anim-spring-3 { animation: springInUp 0.65s var(--spring-ease) both 0.25s; }
+.reveal-on-scroll.is-visible .anim-spring-4 { animation: springInUp 0.65s var(--spring-ease) both 0.35s; }
+.reveal-on-scroll.is-visible .anim-spring-5 { animation: springInUp 0.65s var(--spring-ease) both 0.45s; }
+.reveal-on-scroll.is-visible .anim-spring-6 { animation: springInUp 0.65s var(--spring-ease) both 0.55s; }
+
 .float-badge-1 { animation: floatGentle1 4s ease-in-out infinite; }
 .float-badge-2 { animation: floatGentle2 4.5s ease-in-out infinite 0.5s; }
 .float-badge-3 { animation: floatGentle3 4.2s ease-in-out infinite 0.2s; }
@@ -213,10 +231,13 @@
 
 @media (prefers-reduced-motion: reduce) {
   .anim-spring-1, .anim-spring-2, .anim-spring-3, .anim-spring-4, .anim-spring-5, .anim-spring-6,
+  .reveal-on-scroll .anim-spring-1, .reveal-on-scroll .anim-spring-2, .reveal-on-scroll .anim-spring-3,
+  .reveal-on-scroll .anim-spring-4, .reveal-on-scroll .anim-spring-5, .reveal-on-scroll .anim-spring-6,
   .float-badge-1, .float-badge-2, .float-badge-3, .float-badge-4,
   .marquee-inner, .btn-punch {
     animation: none !important;
     transform: none !important;
+    opacity: 1 !important;
   }
   .tilt-card, .neo-card-lift {
     transform: none !important;

@@ -34,7 +34,7 @@ export function SkillsJourney() {
         <div className="flex flex-col gap-8">
           <motion.div variants={fadeUp}>
             <Badge variant="default" className="mb-4">03 // SKILLS</Badge>
-            <h2 className="font-display text-4xl md:text-5xl font-bold uppercase text-[var(--color-obsidian)] drop-shadow-[2px_2px_0px_#121212]">
+            <h2 className="font-display text-4xl md:text-5xl font-bold uppercase text-[var(--color-obsidian)] drop-shadow-[2px_2px_0px_var(--color-on-surface)]">
               What I Work With
             </h2>
           </motion.div>
@@ -50,7 +50,7 @@ export function SkillsJourney() {
                     {skillGroup.items.map((item, index) => (
                       <span
                         key={index}
-                        className="inline-flex items-center border-[2px] border-[var(--color-obsidian)] bg-[var(--color-canvas)] px-3 py-1 text-sm font-bold shadow-[2px_2px_0px_0px_#121212]"
+                        className="inline-flex items-center border-[2px] border-[var(--color-obsidian)] bg-[var(--color-canvas)] px-3 py-1 text-sm font-bold shadow-[2px_2px_0px_0px_var(--color-on-surface)]"
                       >
                         {item}
                       </span>
@@ -66,7 +66,7 @@ export function SkillsJourney() {
         <div className="flex flex-col gap-8">
           <motion.div variants={fadeUp}>
             <Badge variant="default" className="mb-4">04 // JOURNEY</Badge>
-            <h2 className="font-display text-4xl md:text-5xl font-bold uppercase text-[var(--color-obsidian)] drop-shadow-[2px_2px_0px_#121212]">
+            <h2 className="font-display text-4xl md:text-5xl font-bold uppercase text-[var(--color-obsidian)] drop-shadow-[2px_2px_0px_var(--color-on-surface)]">
               Learning Timeline
             </h2>
           </motion.div>
